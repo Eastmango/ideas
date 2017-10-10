@@ -1,0 +1,25 @@
+<% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
+<p>
+  <strong>User name:</strong>
+  <%= @comment.user_id %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @comment.body %>
+</p>
+
+<p>
+  <strong>Idea:</strong>
+  <%= @comment.idea_id %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
